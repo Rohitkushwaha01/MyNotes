@@ -1,0 +1,6 @@
+body {
+  background-image: -webkit-linear-gradient(65deg, #a683e3 20%, #e4e9fd 70%) !important;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
