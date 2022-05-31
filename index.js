@@ -31,13 +31,33 @@ function showNotes() {
   }
 
   let html = "";
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const date = new Date();
+  let month = months[date.getMonth()];
   notesObj.forEach(function (element, index) {
     html += `
     <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
       <div class="card-body">
         <h5 class="card-title">Note ${index + 1}</h5>
         <p class="card-text"> ${element}</p>
+        <div class="end">
         <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+        <p class="time"> ${month + " " + date.getDate()}</p>
+        </div>
       </div>
     </div>`;
   });
